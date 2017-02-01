@@ -1,0 +1,22 @@
+{
+  "name": "clay-client",
+  "version": "0.1.0",
+  "description": "Javascript client to call Clay cloud functions",
+  "main": "clay-client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cloud",
+    "functions",
+    "clay",
+    "javascript",
+    "client"
+  ],
+  "author": "Clay Labs Inc.",
+  "license": "MIT",
+  "dependencies": {
+    "request": "2.79.0",
+    "request-promise-native": "1.0.3"
+  }
+}
