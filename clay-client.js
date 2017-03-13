@@ -1,25 +1,24 @@
 var axios = require('axios');
 
 const clayApi = (process.env.CLAY_DEV) ? 'http://localhost:4500' : 'https://clay.run';
-const servicePage = `${clayApi}/services`;
+const servicePage = clayApi + "/services";
 
 module.exports = {
   run: function (serviceName, data) {
     var clayOptions = {
       method: 'POST',
-      url: `${servicePage}/${serviceName}`,
+      url: servicePage + "/" + serviceName,
       data: data,
       timeout: 0,
       responseType: 'json'
     }
-    return new Promise((resolve, reject) => {
-      axios(clayOptions).then((result) => {
+    return new Promise(function(resolve, reject){
+      axios(clayOptions).then(function(result){
         resolve(result.data);
       })
-      .catch((err) => {
+      .catch(function(err){
         reject(err);
       })
     })
   }
 }
-
