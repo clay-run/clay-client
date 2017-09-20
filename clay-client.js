@@ -1,6 +1,6 @@
 var axios = require('axios');
 
-const clayApi = (process.env.CLAY_DEV) ? 'http://localhost:4500' : 'https://clay.run';
+const clayApi = (process.env.CLAY_DEV) ? 'http://localhost:4500' : 'https://www.clay.run';
 const servicePage = clayApi + "/services";
 
 module.exports = {
