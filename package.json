@@ -1,6 +1,6 @@
 {
   "name": "clay-client",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Javascript client to call Clay cloud functions",
   "main": "clay-client.js",
   "scripts": {
