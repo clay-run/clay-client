@@ -1,13 +1,12 @@
 var axios = require('axios');
 
-const clayApi = (process.env.CLAY_DEV) ? 'http://localhost:4500' : 'https://clay.run';
-const servicePage = `${clayApi}/services`;
+const clayApi = (process.env.CLAY_DEV) ? 'http://localhost:4500' : 'https://exec.clay.run';
 
 module.exports = {
   run: function (serviceName, data) {
     var clayOptions = {
       method: 'POST',
-      url: `${servicePage}/${serviceName}`,
+      url: `${clayApi}/${serviceName}`,
       data: data,
       timeout: 0,
       responseType: 'json'
