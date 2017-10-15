@@ -11,14 +11,13 @@ module.exports = {
       timeout: 0,
       responseType: 'json'
     }
-    return new Promise((resolve, reject) => {
-      axios(clayOptions).then((result) => {
+    return new Promise(function(resolve, reject){
+      axios(clayOptions).then(function(result){
         resolve(result.data);
       })
-      .catch((err) => {
+      .catch(function(err){
         reject(err);
       })
     })
   }
 }
-
