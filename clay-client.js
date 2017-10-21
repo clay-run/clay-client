@@ -6,7 +6,7 @@ module.exports = {
   run: function (serviceName, data) {
     var clayOptions = {
       method: 'POST',
-      url: `${clayApi}/${serviceName}`,
+      url: clayApi + '/' + serviceName,
       data: data,
       timeout: 0,
       responseType: 'json'
